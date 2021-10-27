@@ -8,8 +8,8 @@ jobs:
       - run:
           name: install
           command: |
-            python3 -m venv
-            - venc/bin/active
+            python3 -m venv venv
+            .venv/bin/active
             pip install --upgrade pip
             pip install pytest
             pip install flake8
