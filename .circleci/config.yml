@@ -2,13 +2,14 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.6.3
+      - image: circleci/python3.7
+    working_directory: ~/devops
     steps:
       - checkout
       - run:
           name: dependencies
           command: |
-            python3 -m venv venv
+            python3 -m venv
             . venv/bin/activate
             pip install --upgrade pip
             pip install pytest
