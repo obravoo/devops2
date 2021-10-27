@@ -20,8 +20,8 @@ jobs:
             . ~/venv/bin/activate
             flake8 --statistics
             pytest --junitxml=test-results/junit.xml
-      - store-test-results:
-          path: test-reports
+      - store_test_results:
+          path: test-results
       - store_artifacts:
-          path: test-reports
-          destination: test-reports
+          path: test-results
+          destination: test-results
