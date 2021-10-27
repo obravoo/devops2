@@ -2,15 +2,11 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python3.7
-        auth:
-          username: $DOCKERHUB_USERNAME
-          password: $DOCKERHUB_PASSWORD
-    working_directory: ~/devops
+      - image: circleci/python:3.6.3
     steps:
       - checkout
       - run:
-          name: dependencies
+          name: install
           command: |
             python3 -m venv
             . venv/bin/activate
